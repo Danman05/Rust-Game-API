@@ -27,7 +27,7 @@ exports.authenticate = passport.authenticate('steam')
 
 exports.returnCallback = (req, res) => {
     passport.authenticate("steam", { failureRedirect: "/" })(req, res, () => {
-        res.redirect("/api/auth/user");
+        res.redirect("http://localhost:4200");
     });
 };
 
